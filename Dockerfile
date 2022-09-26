@@ -1,8 +1,8 @@
 # syntax=docker/dockerfile:1
-FROM node:12-alpine
-RUN apk add --no-cache python g++ make
+FROM nginx
 WORKDIR /app/Toolbox
 COPY . .
-RUN npm install --production \
+RUN yum install node\
+    && npm install --production \
     && npm run build:package \
     && mv /app/Toolbox/dist/* /usr/share/nginx/html/
