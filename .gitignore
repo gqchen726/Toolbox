@@ -21,3 +21,10 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# customer
+/dist
+antd-manifest.json
+antDesign-manifest.json
+react-manifest.json
+reactDom-manifest.json
