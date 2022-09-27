@@ -3,9 +3,8 @@ WORKDIR /app
 COPY package.json webpack.config.js .babelrc ./
 COPY conf ./conf
 COPY src ./src
-RUN npm install \
-    && npm run build:package \
-    && rm -fr node_modules
+RUN npm install
+RUN npm run build:package
 
 FROM nginx:alpine
 # set file permissions for nginx user
